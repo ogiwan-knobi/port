@@ -5,9 +5,10 @@
   --muted: #6b6b6b;
   --card: #ffffff;
   --btn: #1f5c7c;
+  --bar: #f1f1f1;
   --blue: #1a6cf0;
-  --radius: 16px;
-  --max: 1080px;
+  --linkedin: #0a66c2;
+  --content: 720px;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -22,100 +23,122 @@ body {
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 
-.container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+/* Every section shares the same 720px content column */
+.container {
+  width: 100%;
+  max-width: var(--content);
+  margin: 0 auto;
+  padding: 0 16px;
+}
 
 /* ---------- Header ---------- */
 .header {
   position: sticky; top: 16px; z-index: 10;
-  max-width: var(--max); margin: 16px auto 0; padding: 0 24px;
+  width: 100%; max-width: var(--content);
+  margin: 16px auto 0; padding: 0 16px;
 }
 .nav {
   display: flex; align-items: center; justify-content: space-between;
-  background: #fff; border-radius: 999px; padding: 12px 24px;
+  background: #fff; border-radius: 999px; height: 56px; padding: 0 24px;
   box-shadow: 0 4px 18px rgba(0,0,0,.08);
 }
-.nav-left, .nav-right { display: flex; align-items: center; gap: 28px; }
+.nav-left, .nav-right { display: flex; align-items: center; gap: 24px; }
 .nav a.link { font-size: 15px; }
 .nav a.link:hover, .nav a.active { color: var(--blue); }
 .social-btn {
   width: 32px; height: 32px; border-radius: 8px; display: inline-grid; place-items: center;
   background: var(--blue); color: #fff; font-weight: 700; font-size: 13px;
 }
-.social-btn.li { background: #0a66c2; }
+.social-btn.li { background: var(--linkedin); }
 .social-btn:hover { opacity: .85; }
 
 /* ---------- Home hero ---------- */
 .hero {
   display: grid; grid-template-columns: 1fr 1fr; align-items: end;
-  padding: 40px 0 0; min-height: 520px;
+  padding: 48px 0 0;
 }
-.hero-img { justify-self: start; max-height: 520px; object-fit: cover; object-position: top; }
-.hero-text { text-align: right; padding-bottom: 60px; }
-.hero-text h1 { font-size: 72px; line-height: 1; font-weight: 600; letter-spacing: -1px; }
-.hero-text h2 { font-size: 20px; font-weight: 600; margin-top: 4px; }
-.hero-text p { color: var(--muted); font-size: 15px; margin-top: 16px; max-width: 360px; margin-left: auto; }
+.hero-img { justify-self: start; width: 100%; max-height: 420px; object-fit: cover; object-position: top; }
+.hero-text { text-align: right; padding-bottom: 40px; }
+.hero-text h1 { font-size: 56px; line-height: 1; font-weight: 600; letter-spacing: -1px; }
+.hero-text h2 { font-size: 18px; font-weight: 600; margin-top: 4px; }
+.hero-text p { color: var(--muted); font-size: 14px; margin-top: 14px; }
 
 /* ---------- About band ---------- */
-.about { background: var(--dark); color: #fff; padding: 40px 0; margin-top: 40px; }
-.about h3 { font-size: 22px; margin-bottom: 12px; }
-.about p { font-size: 14px; opacity: .9; margin-bottom: 14px; max-width: var(--max); }
+.about { background: var(--dark); color: #fff; padding: 32px 0; margin-top: 40px; }
+.about .container h3 { font-size: 20px; margin-bottom: 12px; }
+.about .container p { font-size: 13px; opacity: .9; margin-bottom: 12px; line-height: 1.6; }
 
-/* ---------- Project cards ---------- */
-.section-title { font-size: 22px; font-weight: 600; margin: 48px 0 24px; }
+/* ---------- Project banners: 720 x 600, same as Frame_16 ---------- */
+.section-title { font-size: 20px; font-weight: 600; margin: 40px 0 24px; }
+
 .project-card {
-  background: var(--card); border-radius: 24px; padding: 32px;
-  box-shadow: 0 6px 24px rgba(0,0,0,.07); margin-bottom: 32px;
+  width: 100%; max-width: var(--content); height: 600px;
+  margin: 0 auto 32px;
+  background: var(--card);
+  border-radius: 24px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.08);
+  padding: 40px 40px 32px;
+  display: flex; flex-direction: column; justify-content: space-between;
 }
-.project-body { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
-.project-body img { width: 100%; border-radius: 12px; object-fit: contain; }
-.project-tag { font-size: 16px; font-weight: 500; }
-.project-card h3 { font-size: 40px; line-height: 1.1; font-weight: 600; margin: 8px 0 16px; }
-.project-card p { color: var(--muted); font-size: 16px; }
+.project-body {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center;
+  flex: 1;
+}
+.project-body img {
+  width: 100%; height: 100%; max-height: 340px; object-fit: contain;
+}
+.project-text { padding-right: 8px; }
+.project-tag { font-size: 16px; font-weight: 500; color: var(--text); }
+.project-text h3 {
+  font-size: 40px; line-height: 1.15; font-weight: 600;
+  margin: 14px 0 18px; letter-spacing: -.3px;
+}
+.project-text p { color: #3a3a3a; font-size: 15px; line-height: 1.5; }
+
 .project-footer {
   display: flex; align-items: center; justify-content: space-between;
-  background: #f1f1f1; border-radius: 14px; padding: 14px 18px; margin-top: 28px;
+  background: var(--bar); border-radius: 16px; height: 88px; padding: 0 24px;
 }
-.brand-logo { font-weight: 700; font-size: 18px; }
-.brand-logo small { display: block; font-size: 10px; font-weight: 400; opacity: .7; }
+.project-footer img.logo { height: 56px; width: auto; }
 .btn-leia {
-  background: var(--btn); color: #fff; padding: 12px 30px; border-radius: 999px; font-size: 15px;
+  background: var(--btn); color: #fff;
+  padding: 0 40px; height: 48px; line-height: 48px;
+  border-radius: 999px; font-size: 15px; font-weight: 500;
 }
 .btn-leia:hover { opacity: .9; }
 
 /* ---------- Case study pages ---------- */
-.case-hero { text-align: center; padding: 48px 0 24px; }
-.case-hero h1 { font-size: 56px; line-height: 1.05; font-weight: 600; letter-spacing: -1px; }
-.case-hero p { color: var(--muted); font-size: 18px; margin-top: 12px; }
-.case-cover { margin: 24px 0 48px; border-radius: 20px; width: 100%; }
-.case h2 { font-size: 26px; font-weight: 600; margin: 48px 0 12px; }
-.case p { font-size: 16px; color: #333; margin-bottom: 14px; }
-.case ul { margin: 8px 0 16px 22px; color: #333; }
+.case-hero { text-align: center; padding: 40px 0 20px; }
+.case-hero h1 { font-size: 44px; line-height: 1.08; font-weight: 600; letter-spacing: -.8px; }
+.case-hero p { color: var(--muted); font-size: 16px; margin-top: 12px; }
+.case-cover { margin: 20px 0 40px; border-radius: 20px; width: 100%; }
+.case h2 { font-size: 22px; font-weight: 600; margin: 40px 0 12px; }
+.case p { font-size: 15px; color: #333; margin-bottom: 14px; }
+.case ul { margin: 8px 0 16px 22px; color: #333; font-size: 15px; }
 .case li { margin-bottom: 6px; }
 .quote {
-  text-align: center; font-size: 22px; font-style: italic; font-weight: 600;
-  line-height: 1.4; margin: 40px auto; max-width: 620px;
+  text-align: center; font-size: 20px; font-style: italic; font-weight: 600;
+  line-height: 1.4; margin: 36px auto; max-width: 560px;
 }
-.case-img { width: 100%; border-radius: 16px; margin: 24px 0; }
-.case-footer { text-align: center; padding: 48px 0 24px; color: var(--muted); font-size: 14px; }
+.case-img { width: 100%; border-radius: 16px; margin: 20px 0; }
+.case-footer { text-align: center; padding: 40px 0 20px; color: var(--muted); font-size: 14px; }
 
-/* ---------- Site footer ---------- */
+/* ---------- Footer ---------- */
 .footer {
-  background: #e6e7ea; padding: 40px 0; margin-top: 56px; text-align: center;
+  background: #e6e7ea; padding: 36px 0; margin-top: 56px; text-align: center;
 }
 .footer .socials { display: flex; justify-content: center; gap: 16px; }
 .footer .social-btn { width: 40px; height: 40px; border-radius: 50%; font-size: 15px; }
-.footer .social-btn.li { border-radius: 50%; }
 
-/* ---------- Responsive ---------- */
-@media (max-width: 800px) {
-  .hero { grid-template-columns: 1fr; min-height: auto; }
-  .hero-img { max-height: 360px; margin: 0 auto; }
+/* ---------- Small screens ---------- */
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; }
   .hero-text { text-align: center; }
-  .hero-text h1 { font-size: 48px; }
-  .hero-text p { margin: 16px auto 0; }
+  .hero-text h1 { font-size: 44px; }
+  .project-card { height: auto; padding: 24px; }
   .project-body { grid-template-columns: 1fr; }
-  .project-card h3 { font-size: 30px; }
-  .case-hero h1 { font-size: 38px; }
+  .project-text h3 { font-size: 30px; }
+  .project-footer { height: auto; padding: 16px 20px; flex-wrap: wrap; gap: 12px; }
+  .case-hero h1 { font-size: 32px; }
   .nav-left a.link:not(:first-child) { display: none; }
-  .nav-left, .nav-right { gap: 12px; }
 }
