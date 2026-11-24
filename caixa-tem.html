@@ -8,18 +8,24 @@
 </head>
 <body>
 
-  <header class="header">
+  <header class="header" id="site-header">
     <nav class="nav">
       <div class="nav-left">
         <a class="link" href="index.html">Igo Souza</a>
         <a class="link active" href="index.html#projetos">Projetos</a>
       </div>
       <div class="nav-right">
-        <a class="link" href="assets/curriculo-igo-souza.pdf" target="_blank" rel="noopener">Currículo</a>
+        <a class="link desk-only" href="assets/curriculo-igo-souza.pdf" target="_blank" rel="noopener">Currículo</a>
         <a class="social-btn" href="https://www.behance.net/igoreiz" target="_blank" rel="noopener" aria-label="Behance">Bé</a>
         <a class="social-btn li" href="https://www.linkedin.com/in/igodsouza/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span></button>
       </div>
     </nav>
+    <div class="mobile-menu">
+      <a href="index.html">Igo Souza</a>
+      <a href="index.html#projetos">Projetos</a>
+      <a href="assets/curriculo-igo-souza.pdf" target="_blank" rel="noopener">Currículo</a>
+    </div>
   </header>
 
   <main class="container case">
@@ -117,5 +123,6 @@
     </div>
   </footer>
 
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
