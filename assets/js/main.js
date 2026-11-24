@@ -45,3 +45,22 @@
     if (e.clientY < 90) show();
   });
 })();
+
+// Mobile subtitle: 24px, shrinks only if it is wider than the title's available width
+(function () {
+  var h2 = document.querySelector('.hero-text h2');
+  if (!h2) return;
+  function fitSub() {
+    if (window.innerWidth > 760) { h2.style.fontSize = ''; return; }
+    var box = h2.parentElement;
+    var avail = box.clientWidth - 96;
+    h2.style.fontSize = '24px';
+    h2.style.display = 'inline-block';
+    var w = h2.getBoundingClientRect().width;
+    h2.style.display = '';
+    if (w > avail) h2.style.fontSize = (24 * avail / w) + 'px';
+  }
+  fitSub();
+  window.addEventListener('resize', fitSub);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitSub);
+})();
