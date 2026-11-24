@@ -26,12 +26,19 @@
       <a href="index.html">Igo Souza</a>
       <a href="#projetos">Projetos</a>
       <a href="assets/curriculo-igo-souza.pdf" target="_blank" rel="noopener">Currículo</a>
+      <div class="mobile-social">
+        <a class="social-btn" href="https://www.behance.net/igoreiz" target="_blank" rel="noopener" aria-label="Behance">Bé</a>
+        <a class="social-btn li" href="https://www.linkedin.com/in/igodsouza/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+      </div>
     </div>
   </header>
 
-  <main class="container">
+  <div class="container">
     <section class="hero" id="topo">
-      <img class="hero-img" src="assets/img/home-1.webp" alt="Retrato de Igo Souza">
+      <picture>
+        <source media="(max-width: 760px)" srcset="assets/img/mobile_home.webp">
+        <img class="hero-img" src="assets/img/home-1.webp" alt="Retrato de Igo Souza">
+      </picture>
       <div class="hero-text">
         <h1>Igo Souza</h1>
         <h2>Digital Product Designer</h2>
@@ -39,82 +46,85 @@
         <p>Experiência em pagamentos, Pix e gestão, unindo usabilidade e estratégia de negócio.</p>
       </div>
     </section>
+  </div>
 
-    <section class="about">
+  <section class="about">
+    <div class="about-inner">
       <h3>Sobre mim:</h3>
       <p>Product Designer com formação multidisciplinar: pós-graduado em Desenvolvimento de Inteligência Artificial e em Design de Produtos Digitais, graduado em Marketing, com complementação em Psicologia e base técnica em Programação de Jogos Digitais, unindo rigor de design, visão estratégica, comportamento humano e diálogo técnico com engenharia.</p>
       <p>Atuo com Product Design, UX Research, Design Systems, Prototyping, Interaction Design, Writing e Design Conversacional, dominando Figma, Miro e ferramentas de IA para acelerar processos e elevar a qualidade dos produtos. Tenho vivência em testes A/B, CSAT e NPS, Atomic Design e clareza de dados.</p>
       <p>Na Onfly, evoluí produtos de gestão de viagens, despesas e pagamentos e, em menos de 6 meses após o lançamento do app, do Pix e do Spend Control, os resultados incluíram +60% de performance, +63% nos acessos do app, 20 mil+ pagamentos via Pix, +R$20 milhões transacionados e 6 mil+ transações bloqueadas pelo Spend Control, evitando cerca de R$1 milhão em despesas indevidas.</p>
-    </section>
+    </div>
+  </section>
 
-    <section class="projects" id="projetos">
-      <h2 class="section-title">Projetos:</h2>
+  <main class="container projects" id="projetos">
+    <h2 class="section-title">Projetos:</h2>
 
-      <article class="project-card">
-        <div class="project-body">
-          <img src="assets/img/home-2.png" alt="Mockup do Pix Corporativo na Onfly">
-          <div class="project-text">
-            <p class="project-tag">Onfly</p>
-            <h3>Pix Corporativo na Onfly</h3>
-            <p>Como um problema de confiança virou R$ 10 milhões em menos de seis meses</p>
-            <p class="project-author">Igo Souza · Product Designer · 2026</p>
-          </div>
+    <article class="project-card">
+      <div class="project-body">
+        <img src="assets/img/home-2.png" alt="Mockup do Pix Corporativo na Onfly">
+        <div class="project-text">
+          <p class="project-tag">Onfly</p>
+          <h3>Pix Corporativo na Onfly</h3>
+          <p>Como um problema de confiança virou R$ 10 milhões em menos de seis meses</p>
         </div>
-        <div class="project-footer">
-          <img class="logo" src="assets/img/logos/logo-onfly.png" alt="onfly · Estudo de Caso">
-          <a class="btn-leia" href="pix.html">Leia mais</a>
-        </div>
-      </article>
+      </div>
+      <div class="project-footer">
+        <img class="logo" src="assets/img/logos/logo-onfly.png" alt="onfly · Estudo de Caso">
+        <a class="btn-leia" href="pix.html">Leia mais</a>
+      </div>
+    </article>
 
-      <article class="project-card">
-        <div class="project-body">
-          <img src="assets/img/home-3.png" alt="Telas do Go Now">
-          <div class="project-text">
-            <p class="project-tag">Go Now</p>
-            <h3>Inovação e Design Inteligente</h3>
-            <p>O Go Now é o case de um aplicativo de viagens desenvolvido para oferecer uma experiência intuitiva e moderna para os viajantes.</p>
-            <p class="project-author">Igo Souza · Product Designer · 2025</p>
-          </div>
+    <article class="project-card">
+      <div class="project-body">
+        <img src="assets/img/home-3.png" alt="Telas do Go Now">
+        <div class="project-text">
+          <p class="project-tag">Go Now</p>
+          <h3>Inovação e Design Inteligente</h3>
+          <p>O Go Now é o case de um aplicativo de viagens desenvolvido para oferecer uma experiência intuitiva e moderna para os viajantes.</p>
         </div>
-        <div class="project-footer">
-          <img class="logo" src="assets/img/logos/logo-gonow.png" alt="Go Now · Estudo de Caso">
-          <a class="btn-leia" href="go-now.html">Leia mais</a>
-        </div>
-      </article>
+      </div>
+      <div class="project-footer">
+        <img class="logo" src="assets/img/logos/logo-gonow.png" alt="Go Now · Estudo de Caso">
+        <a class="btn-leia" href="go-now.html">Leia mais</a>
+      </div>
+    </article>
 
-      <article class="project-card">
-        <div class="project-body">
-          <img src="assets/img/home-4.png" alt="Telas do Mobills Investimentos">
-          <div class="project-text">
-            <p class="project-tag">Mobills</p>
-            <h3>Mobills Investe</h3>
-            <p>Um produto digital para tornar mais fácil tomar decisões assertivas para a sua vida financeira.</p>
-            <p class="project-author">Igo Souza · Product Designer · 2022</p>
-          </div>
+    <article class="project-card">
+      <div class="project-body">
+        <img src="assets/img/home-4.png" alt="Telas do Mobills Investimentos">
+        <div class="project-text">
+          <p class="project-tag">Mobills</p>
+          <h3>Mobills Investe</h3>
+          <p>Um produto digital para tornar mais fácil tomar decisões assertivas para a sua vida financeira.</p>
         </div>
-        <div class="project-footer">
-          <img class="logo" src="assets/img/logos/logo-mobills.png" alt="mobills investimentos · Estudo de Caso">
-          <a class="btn-leia" href="mobills.html">Leia mais</a>
-        </div>
-      </article>
+      </div>
+      <div class="project-footer">
+        <img class="logo" src="assets/img/logos/logo-mobills.png" alt="mobills investimentos · Estudo de Caso">
+        <a class="btn-leia" href="mobills.html">Leia mais</a>
+      </div>
+    </article>
 
-      <article class="project-card">
-        <div class="project-body">
-          <img src="assets/img/home-5.png" alt="Cartões do Caixa Tem">
-          <div class="project-text">
-            <p class="project-tag">Caixa Tem</p>
-            <h3>Estudo de caso</h3>
-            <p>Melhorando a experiência de serviços e transações bancárias do brasileiro através do redesign do aplicativo</p>
-            <p class="project-author">Igo Souza · Product Designer · 2020</p>
-          </div>
+    <article class="project-card">
+      <div class="project-body">
+        <img src="assets/img/home-5.png" alt="Cartões do Caixa Tem">
+        <div class="project-text">
+          <p class="project-tag">Caixa Tem</p>
+          <h3>Estudo de caso</h3>
+          <p>Melhorando a experiência de serviços e transações bancárias do brasileiro através do redesign do aplicativo</p>
         </div>
-        <div class="project-footer">
-          <img class="logo" src="assets/img/logos/logo-caixa.png" alt="CAIXA · Estudo de Caso">
-          <a class="btn-leia" href="caixa-tem.html">Leia mais</a>
-        </div>
-      </article>
-    </section>
+      </div>
+      <div class="project-footer">
+        <img class="logo" src="assets/img/logos/logo-caixa.png" alt="CAIXA · Estudo de Caso">
+        <a class="btn-leia" href="caixa-tem.html">Leia mais</a>
+      </div>
+    </article>
   </main>
+
+  <p class="contact-line">
+    <strong>Igo Souza</strong> · Product Designer · 2026<br>
+    <a href="mailto:igosouza@live.com">igosouza@live.com</a>
+  </p>
 
   <footer class="footer">
     <div class="socials">
