@@ -112,7 +112,7 @@ button { font: inherit; }
 }
 .hero-text h1 { font-size: 72px; line-height: 1; font-weight: 700; letter-spacing: -1px; white-space: nowrap; }
 .hero-text h2 { font-size: 22px; font-weight: 700; margin-top: 4px; }
-.hero-text p { color: var(--muted); font-size: 16px; font-weight: 400; margin-top: 14px; max-width: 440px; margin-left: auto; }
+.hero-text p { color: var(--muted); font-size: 16px; font-weight: 400; margin-top: 14px; margin-left: auto; }
 
 /* ---------- "Sobre mim": full-width band, text column is 720px ---------- */
 .about { background: var(--dark); color: #fff; }
@@ -165,11 +165,6 @@ button { font: inherit; }
 .btn-leia:hover { font-weight: 800; }
 
 /* ---------- Contact line (home) ---------- */
-.contact-line {
-  text-align: center; color: var(--muted); font-size: 14px; font-weight: 400; line-height: 1.8;
-  margin: 48px auto 8px; max-width: var(--content);
-}
-.contact-line a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---------- Case study pages ---------- */
 .case { padding: 0 16px; }
@@ -236,6 +231,7 @@ button { font: inherit; }
   .hero-text h2 + p { margin-top: 32px; }
   .hero-text p { font-size: 14px; font-weight: 400; }
   .hero-text p + p { margin-top: 16px; }
+  .hero-text br.desk-br { display: none; }
 
   .hero picture { display: block; order: 2; margin-top: 24px; }
   .hero-img { position: static; width: 100%; height: auto; }
@@ -257,12 +253,11 @@ button { font: inherit; }
   .project-footer img.logo { display: none; }
   .btn-leia { width: 100%; height: 52px; line-height: 52px; }
 
-  .contact-line { padding: 0 24px; }
 
   /* Case pages on mobile: no floating menu in the flow, title sits 64px from the top */
   body.case-page .header { margin-bottom: -68px; }
   body.case-page .case-hero { padding-top: 64px; }
-  body.case-page .case-hero br { display: none; }
+  body.case-page .case-hero br.desk-br { display: none; }
   body.case-page .case-hero p { text-wrap: balance; }
   .case { padding: 0 24px; }
 }
